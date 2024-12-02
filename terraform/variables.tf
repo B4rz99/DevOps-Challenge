@@ -13,3 +13,7 @@ variable "public_subnets" {
     type = list(string)
   
 }
+
+variable "my-ip" {
+    description = "The IP address to allow SSH access to the EC2 instances"
+}

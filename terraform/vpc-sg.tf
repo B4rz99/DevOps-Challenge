@@ -15,7 +15,7 @@ resource "aws_vpc_security_group_ingress_rule" "allow_http" {
 
 resource "aws_vpc_security_group_ingress_rule" "allow_ssh" {
   security_group_id = aws_security_group.AcklenAvenueVPCSecurityGroup.id
-  cidr_ipv4   = var.vpc_cidr
+  cidr_ipv4   = var.my-ip
   from_port   = 22
   to_port     = 22
   ip_protocol = "tcp"

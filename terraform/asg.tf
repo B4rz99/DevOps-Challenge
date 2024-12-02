@@ -37,6 +37,7 @@ resource "aws_launch_template" "lt" {
   description   = "Launch template for EC2 instances"
   image_id      = "ami-0866a3c8686eaeeba"
   instance_type = "t3.micro"
+  key_name      = module.key_pair.key_pair_name
 
   block_device_mappings {
     device_name = "/dev/xvda"

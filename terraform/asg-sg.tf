@@ -20,7 +20,7 @@ resource "aws_security_group_rule" "allow_ssh" {
     from_port         = 22
     to_port           = 22
     protocol          = "tcp"
-    cidr_blocks       = [module.vpc.vpc_cidr_block]
+    cidr_blocks       = [var.my-ip]
     security_group_id = aws_security_group.AcklenAvenueASGSecurityGroup.id
     description       = "Allow SSH traffic"
   
