@@ -15,16 +15,6 @@ resource "aws_security_group_rule" "allow_http" {
     description       = "Allow HTTP traffic"
 }
 
-resource "aws_security_group_rule" "allow_https" {
-    type              = "ingress"
-    from_port         = 443
-    to_port           = 443
-    protocol          = "tcp"
-    cidr_blocks       = [module.vpc.vpc_cidr_block]
-    security_group_id = aws_security_group.AcklenAvenueASGSecurityGroup.id
-    description       = "Allow HTTPS traffic"
-}
-
 resource "aws_security_group_rule" "allow_ssh" {
     type              = "ingress"
     from_port         = 22
